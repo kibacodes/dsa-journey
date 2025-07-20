@@ -22,3 +22,26 @@ var removeOuterParentheses = function (s) {
 
     return ans;
 };
+
+var removeOuterParentheses = function (s) {
+    let stack = [];
+    let ans = "";
+
+    for (let i = 0; i < s.length; ++i) {
+        if (s[i] === "(") {
+            stack.push(s[i]);
+            stack.length > 1 ? ans += s[i] : ans += ""; 
+            // we are including the brackets into the ans variable declared above.
+            /*
+                if (stack.length > 1) {
+                    ans = ans + s[i]; 
+                }
+            
+            */
+        } else {
+            stack.length > 1 ? ans += s[i] : ans += "";
+            stack.pop();
+        }
+    }
+    return ans;
+};

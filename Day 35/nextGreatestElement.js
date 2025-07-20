@@ -27,12 +27,14 @@ var nextGreaterElement = function (nums1, arr) {
         stack.push(arr[i]);
     }
 
-    let ans = [];
+    // let ans = [];
 
     // for (let i = 0; i < nums1.length; ++i) {
     //     ans.push(ngeMap[nums1[i]]);
     // }
 
+    // return ans;
+    // above is solution without using the array method below.
     return nums1.map(x => ngeMap[x]);
 
 };

@@ -12,6 +12,7 @@ MinStack.prototype.push = function(val) {
         this.s.push([val, val]);
     } else {
         // min value is the minimum between last min and curr value
+        // Math.min(last min, curr val)
         let lastMinVal = this.s[this.s.length-1][1];
         let minVal = Math.min(val, lastMinVal)
         this.s.push([val, minVal]);
@@ -37,7 +38,7 @@ MinStack.prototype.top = function() {
  */
 MinStack.prototype.getMin = function() {
     return this.s[this.s.length-1][1]
-};;
+};
 
 /** 
  * Your MinStack object will be instantiated and called as such:
