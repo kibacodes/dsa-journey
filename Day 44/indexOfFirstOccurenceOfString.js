@@ -4,7 +4,8 @@
  * @return {number}
  * 
  * Approach #1- Sliding Window
- * Time Complexity - O(n*m) ~
+ * Time Complexity - O(n*m) ~ O(n^2)
+ * Space Complexity - O(1)
  */
 var strStr = function (haystack, needle) {
 
